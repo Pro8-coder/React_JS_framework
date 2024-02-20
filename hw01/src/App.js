@@ -18,7 +18,7 @@ function App() {
         >
           Learn React
         </a>
-        <Message />
+        <Message text="Привет, мир!" />
       </header>
       
     </div>
