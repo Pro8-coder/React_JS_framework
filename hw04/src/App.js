@@ -1,5 +1,5 @@
-// import { Switch, Route } from 'react-router-dom';
-import { Router, Route, Link, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
+import React from 'react';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 
@@ -18,14 +18,10 @@ const App = () => {
                     </ul>
                 </nav>
 
-                <Switch>
-                    <Route path="/about">
-                        <AboutPage />
-                    </Route>
-                    <Route path="/">
-                        <HomePage />
-                    </Route>
-                </Switch>
+                <Routes>
+                    <Route path="/about" element={<AboutPage />} />
+                    <Route path="/" element={<HomePage />} />
+                </Routes>
             </div>
         </Router>
     );
