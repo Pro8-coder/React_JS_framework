@@ -1,16 +1,19 @@
-import "./App.css";
-import TemperatureConverter from './components/TemperatureConverter';
-import TodoList from './components/TodoList';
+import React from 'react';
+import Theme from './components/theme';
+import './App.css';
+import { connect } from 'react-redux';
 
-function App() {
+function App({ theme }) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <TemperatureConverter className="Exercise_1" />
-        <TodoList className="Exercise_1" />
-      </header>
+    <div className={theme === 'light' ? 'light-theme' : 'dark-theme'}>
+      <h1>Welcome to the Theme Switcher App</h1>
+      <Theme />
     </div>
   );
 }
 
-export default App;
+const mapStateToProps = (state) => ({
+  theme: state.theme
+});
+
+export default connect(mapStateToProps)(App);

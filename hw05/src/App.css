@@ -1,19 +1,9 @@
-.App {
-  text-align: center;
+.light-theme {
+  background-color: #ffffff; /* установка фона для светлой темы */
+  color: #000000; /* установка цвета текста для светлой темы */
 }
 
-.MuiTextField-root {
-  margin: 2px 0 !important;
-}
-
-.MuiButton-root {
-  margin: 2px !important;
-  color: aliceblue !important;
-  background-color: #2563eb !important;
-}
-
-.todo_list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.dark-theme {
+  background-color: #1a1a1a; /* установка фона для темной темы */
+  color: #ffffff; /* установка цвета текста для темной темы */
 }
