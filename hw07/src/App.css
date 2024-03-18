@@ -1,0 +1,19 @@
+.App {
+  text-align: center;
+}
+
+.MuiTextField-root {
+  margin: 2px 0 !important;
+}
+
+.MuiButton-root {
+  margin: 2px !important;
+  color: aliceblue !important;
+  background-color: #2563eb !important;
+}
+
+.todo_list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
