@@ -1,13 +1,13 @@
 import React from "react";
-import Product from "../../../img/product2.svg";
-import BgProduct from "../../../img/bg_product2.svg";
+import Product from "../../img/product7.svg";
+import BgProduct from "../../img/bg_product2.svg";
 
 const ProductItem = () => {
   return (
     <div className="product_item">
       <div className="box_img">
-        <img src={BgProduct} alt="product1" className="product_bg_img" />
-        <img src={Product} alt="product1" className="product_img product_bg" />
+        <img src={BgProduct} alt="#" className="product_bg_img" />
+        <img src={Product} alt="product7" className="product_img product_bg" />
         <div className="overlay">
           <button className="add_to_cart">
             <svg

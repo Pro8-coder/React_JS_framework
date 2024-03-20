@@ -251,7 +251,6 @@ input {
     }
 
     &_item {
-        opacity: 0;
         transition: all 0.5s ease-in-out;
     }
 
@@ -709,6 +708,7 @@ input {
 
 .bg_img {
     position: absolute;
+    width: 100%;
 }
 
 .text_in_img {
@@ -914,6 +914,10 @@ input {
         margin-top: 48px;
         width: 212px;
         height: 48px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
         color: $colorSelectSite;
         background-color: $colorWhite;
         border: 1px solid #f16d7f;

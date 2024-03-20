@@ -1,11 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import SpecialOffer from "./SpecialOffer";
-import ProductItem1 from "./ProductItem1";
-import ProductItem2 from "./ProductItem2";
-import ProductItem3 from "./ProductItem3";
-import ProductItem4 from "./ProductItem4";
-import ProductItem5 from "./ProductItem5";
-import ProductItem6 from "./ProductItem6";
+import ProductItem1 from "../../../components/ProductItems/ProductItem1";
+import ProductItem2 from "../../../components/ProductItems/ProductItem2";
+import ProductItem3 from "../../../components/ProductItems/ProductItem3";
+import ProductItem4 from "../../../components/ProductItems/ProductItem4";
+import ProductItem5 from "../../../components/ProductItems/ProductItem5";
+import ProductItem6 from "../../../components/ProductItems/ProductItem6";
 import Women from "../../../img/women.svg";
 import Men from "../../../img/men.svg";
 import Kids from "../../../img/kids.svg";
@@ -35,7 +36,7 @@ const MidSection = () => {
           Shop for items based on what we featured in this week
         </p>
       </div>
-      <article className="offer">
+      <article className="product_list">
         <ProductItem1 />
         <ProductItem2 />
         <ProductItem3 />
@@ -43,6 +44,13 @@ const MidSection = () => {
         <ProductItem5 />
         <ProductItem6 />
       </article>
+      <Link
+        to="/catalogPage"
+        className="product_button"
+        onClick={() => window.scrollTo(0, 0)}
+      >
+        Browse All Product
+      </Link>
     </section>
   );
 };

@@ -1,14 +1,14 @@
 import React from "react";
 import Breadcrumbs from "./breadcrumbs/Breadcrumbs";
-import MidSection from "./mid/MidSection";
+import TopSection from "./top/TopSection";
 
-const Catalog = () => {
+const Cart = () => {
   return (
     <div>
       <Breadcrumbs />
-      <MidSection />
+      <TopSection />
     </div>
   );
 };
 
-export default Catalog;
+export default Cart;

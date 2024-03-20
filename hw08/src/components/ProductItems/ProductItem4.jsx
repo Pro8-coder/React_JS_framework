@@ -1,11 +1,11 @@
 import React from "react";
-import Product from "../../../img/product3.svg";
+import Product from "../../img/product4.svg";
 
 const ProductItem = () => {
   return (
     <div className="product_item">
       <div className="box_img">
-        <img src={Product} alt="product1" className="product_img" />
+        <img src={Product} alt="product4" className="product_img" />
         <div className="overlay">
           <button className="add_to_cart">
             <svg
