@@ -1,13 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
-const ProductOptions = ({ sortItems }) => {
-  const [sortBy, setSortBy] = useState(""); // Локальное состояние для хранения текущего выбранного способа сортировки
-
-  const handleSortChange = (newSortBy) => {
-    setSortBy(newSortBy);
-    sortItems(newSortBy); // Вызываем функцию для сортировки при изменении способа сортировки
-  };
-
+const ProductOptions = () => {
   return (
     <div className="product_options_box">
       <details>
