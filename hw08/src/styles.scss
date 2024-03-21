@@ -931,6 +931,13 @@ input {
             background-color: $colorSelectSite;
         }
     }
+
+    &_carousel {
+        &_box {
+            display: flex;
+            justify-content: center;
+        }
+    }
 }
 
 .box_img {
