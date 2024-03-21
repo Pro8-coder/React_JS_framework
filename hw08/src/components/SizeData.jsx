@@ -1,3 +1,5 @@
+import React from "react";
+
 const productsBySize = {
   S: [
     { name: "ProductItem1" },
@@ -34,3 +36,7 @@ const productsBySize = {
   ],
   M: [{ name: "ProductItem1" }, { name: "ProductItem7" }],
 };
+
+const SizeData = { productsBySize };
+
+export default SizeData;

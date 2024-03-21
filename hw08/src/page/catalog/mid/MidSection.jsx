@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import ProductFilter from "./ProductFilter";
 import ProductOptions from "./ProductOptions";
+import SizeData from "../../../components/SizeData";
 import Carousel from "./Carousel";
 import ProductItem1 from "../../../components/ProductItems/ProductItem1";
 import ProductItem7 from "../../../components/ProductItems/ProductItem7";
@@ -16,7 +17,7 @@ import ProductItem5 from "../../../components/ProductItems/ProductItem5";
 import ProductItem6 from "../../../components/ProductItems/ProductItem6";
 
 const MidSection = () => {
-  const products = [
+  const allProducts = [
     { id: 1, component: <ProductItem1 /> },
     { id: 1, component: <ProductItem7 /> },
     { id: 1, component: <ProductItem3 /> },
@@ -31,13 +32,26 @@ const MidSection = () => {
     { id: 2, component: <ProductItem6 /> },
   ];
 
+  const [filteredProducts, setFilteredProducts] = useState(allProducts);
+
+  const updateProducts = (selectedSizes) => {
+    if (selectedSizes.length > 0) {
+      const filtered = allProducts.filter((product) =>
+        selectedSizes.includes(product.size)
+      );
+      setFilteredProducts(filtered);
+    } else {
+      setFilteredProducts(allProducts);
+    }
+  };
+
   return (
     <section className="mid">
       <div className="product_settings">
         <ProductFilter />
-        <ProductOptions />
+        <ProductOptions updateProducts={updateProducts} />
       </div>
-      <Carousel products={products} />
+      <Carousel products={filteredProducts} />
     </section>
   );
 };
