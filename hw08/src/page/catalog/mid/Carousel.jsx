@@ -32,7 +32,7 @@ const Carousel = ({ products }) => {
   };
 
   useEffect(() => {
-    focusCarousel();
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }, [currentPage]);
 
   return (
